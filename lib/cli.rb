@@ -8,7 +8,7 @@ class CLI
 
     def menu
         # give user an option to see the list of the countries
-         puts " Would you like to see the list of countries?"
+         puts " Would you like to learn about different Countries."
          puts " Type 'yes' to continue or any other key to exit"
 
         user_input = gets.strip.downcase
@@ -18,8 +18,14 @@ class CLI
              puts "Good choice!"
               #display the list
             display_list_of_countries
+            ask_user_for_their_choice
 
-            ask_user_for_their_country_choice
+            sleep(1)
+
+            menu
+
+        else
+            puts "Thank you for visiting the Countrylist !!"
        end
     end
 
@@ -33,18 +39,42 @@ class CLI
 
     end
 
-    def ask_user_for_their_country_choice
+    def ask_user_for_their_choice
         #ask user for choice
-        puts "Enter the number of the country you want to know more about"
+        puts "Enter the number of the country you want to know more about, choose a number between 1 to 250."
         index = gets.strip.to_i - 1
 
+        #index valid? number between 0 and 250
+        until index.between?(0, Country.all.length - 1)
+            # keep asking for user input
+            puts "Sorry invalid input. Choose a valid number"
+            index = gets.strip.to_i - 1
+        end
+    
         country_instance = Country.all[index]
+        
+        display_country_details(country_instance)
+        
         #binding.pry
 
     end
 
+    def display_country_details(country)
+        #binding.pry
+        sleep(1)
+        puts "\n"
+        puts country.name
+        puts "\n"
+        puts "Country Name:  " + country.name
+        puts "\n"
+        puts "Capital:  " + country.capital
+        puts "\n"
+        puts "Region:  " + country.region 
+        puts "\n"
+        puts "Subregion:  " + country.subregion
+        puts "\n"
+        puts "\n"
 
-
-
+    end
 
 end
