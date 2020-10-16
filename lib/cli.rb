@@ -18,6 +18,8 @@ class CLI
              puts "Good choice!"
               #display the list
             display_list_of_countries
+
+            ask_user_for_their_country_choice
        end
     end
 
@@ -25,11 +27,23 @@ class CLI
         # Access all the countries
         #binding.pry
         #print each one out
-        Country.all.each do |country|
-            puts country.name
+        Country.all.each.with_index(1) do |country, index|
+            puts "#{index}. #{country.name}"
         end
 
     end
+
+    def ask_user_for_their_country_choice
+        #ask user for choice
+        puts "Enter the number of the country you want to know more about"
+        index = gets.strip.to_i - 1
+
+        country_instance = Country.all[index]
+        #binding.pry
+
+    end
+
+
 
 
 
