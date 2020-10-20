@@ -13,11 +13,9 @@ class API
          country.capital = country_hash["capital"] 
          country.region = country_hash["region"] 
          country.subregion = country_hash["subregion"]
-         
-         
-         
+         country.flag = country_hash["flag"]
         end
-        # :name, :capital, :region, :subregion
+        # :name, :capital, :region, :subregion, :flag,
   
     end
 end

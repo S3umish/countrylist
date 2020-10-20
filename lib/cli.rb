@@ -1,31 +1,43 @@
 class CLI
 
     def start
-        puts "Welcome"
-        API.fetch_countries
-        self.menu
+    
+        puts "Welcome to the Countrylist!"
+        puts "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
+        puts "\n"
+            API.fetch_countries
+            self.menu
+    
     end
 
     def menu
         # give user an option to see the list of the countries
-         puts " Would you like to learn about different Countries."
-         puts " Type 'yes' to continue or any other key to exit"
+         puts "Would you like to learn about different Countries."
+         puts "Type 'yes' to continue or any other key to exit. "
 
         user_input = gets.strip.downcase
-        # if the user says yes
 
+        # if the user says yes
         if user_input == "yes" || user_input == "y"
-             puts "Good choice!"
+            sleep(1)
+             puts"\n"   
+             puts "Awesome!"
+
+             sleep(2)
               #display the list
             display_list_of_countries
+            
             ask_user_for_their_choice
 
-            sleep(1)
+            sleep(3)
 
             menu
 
         else
+            puts "========================================="
             puts "Thank you for visiting the Countrylist !!"
+            puts "========================================="
+
        end
     end
 
@@ -72,6 +84,8 @@ class CLI
         puts "Region:  " + country.region 
         puts "\n"
         puts "Subregion:  " + country.subregion
+        puts "\n"
+        puts "flag:  " + country.flag
         puts "\n"
         puts "\n"
 

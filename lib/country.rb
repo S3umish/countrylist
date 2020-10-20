@@ -1,7 +1,6 @@
 class Country
 
-    attr_accessor :name, :capital, :region, :subregion
-
+    attr_accessor :name, :capital, :region, :subregion, :flag
     @@all =[]
 
     def initialize
@@ -11,6 +10,5 @@ class Country
     def self.all
         @@all
     end
-
 
 end

@@ -1,8 +1,9 @@
 #!/usr/bin/env ruby
 
 require_relative "../environment.rb"
-
-puts "hi"
+puts "\n"
+puts "Hello"
+puts "\n"
 
 cli_instance =CLI.new
 cli_instance.start
