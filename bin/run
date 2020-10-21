@@ -5,5 +5,5 @@ puts "\n"
 puts "Hello"
 puts "\n"
 
-cli_instance =CLI.new
+cli_instance = CLI.new
 cli_instance.start

@@ -7,7 +7,6 @@ class API
         array_of_country = JSON.parse(response)
 
         array_of_country.each do |country_hash| 
-         #binding.pry
          country= Country.new   
          country.name = country_hash["name"] 
          country.capital = country_hash["capital"] 
@@ -15,7 +14,6 @@ class API
          country.subregion = country_hash["subregion"]
          country.flag = country_hash["flag"]
         end
-        # :name, :capital, :region, :subregion, :flag,
   
     end
 end

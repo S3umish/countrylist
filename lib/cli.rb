@@ -11,21 +11,19 @@ class CLI
     end
 
     def menu
-        # give user an option to see the list of the countries
          puts "**  Would you like to learn about different Countries.  **"
          puts "\n"
          puts "**  Type 'yes' to continue or any other key to 'exit'. **"
 
         user_input = gets.strip.downcase
 
-        # if the user says yes
         if user_input == "yes" || user_input == "y"
             sleep(1)
              puts"\n"   
-             puts "Awesome!"
+             puts "Awesome! Here's the list of Countries. "
 
              sleep(2)
-              #display the list
+        
             display_list_of_countries
             puts "\n"
             ask_user_for_their_choice
@@ -43,9 +41,6 @@ class CLI
     end
 
     def display_list_of_countries
-        # Access all the countries
-        #binding.pry
-        #print each one out
         Country.all.each.with_index(1) do |country, index|
             puts "#{index}. #{country.name}"
         end
@@ -53,16 +48,15 @@ class CLI
     end
 
     def ask_user_for_their_choice
-        #ask user for choice
         
         puts " ** Choose any number between 1 to 250 to learn about a Country. **"
         puts "\n"
-        puts " Note : Countries are indexed alphabettically."
+        puts " Note : Countries are indexed alphabettically,for example 240. United States of America "
+
         index = gets.strip.to_i - 1
 
-        #index valid? number between 0 and 250
         until index.between?(0, Country.all.length - 1)
-            # keep asking for user input
+           
             puts "** Sorry invalid input. Choose a valid number between 1 to 250. **"
             index = gets.strip.to_i - 1
         end
@@ -71,12 +65,10 @@ class CLI
         
         display_country_details(country_instance)
         
-        #binding.pry
-
     end
 
     def display_country_details(country)
-        #binding.pry
+    
         sleep(1)
         puts "\n"
         puts country.name
@@ -93,6 +85,6 @@ class CLI
         puts "\n"
         puts "\n"
 
-    end
+     end
 
 end
