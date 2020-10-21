@@ -5,15 +5,16 @@ class CLI
         puts "Welcome to the Countrylist!"
         puts "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
         puts "\n"
-            API.fetch_countries
-            self.menu
+        API.fetch_countries
+        self.menu
     
     end
 
     def menu
         # give user an option to see the list of the countries
-         puts "Would you like to learn about different Countries."
-         puts "Type 'yes' to continue or any other key to exit. "
+         puts "**  Would you like to learn about different Countries.  **"
+         puts "\n"
+         puts "**  Type 'yes' to continue or any other key to 'exit'. **"
 
         user_input = gets.strip.downcase
 
@@ -26,7 +27,7 @@ class CLI
              sleep(2)
               #display the list
             display_list_of_countries
-            
+            puts "\n"
             ask_user_for_their_choice
 
             sleep(3)
@@ -53,13 +54,16 @@ class CLI
 
     def ask_user_for_their_choice
         #ask user for choice
-        puts "Enter the number of the country you want to know more about, choose a number between 1 to 250."
+        
+        puts " ** Choose any number between 1 to 250 to learn about a Country. **"
+        puts "\n"
+        puts " Note : Countries are indexed alphabettically."
         index = gets.strip.to_i - 1
 
         #index valid? number between 0 and 250
         until index.between?(0, Country.all.length - 1)
             # keep asking for user input
-            puts "Sorry invalid input. Choose a valid number"
+            puts "** Sorry invalid input. Choose a valid number between 1 to 250. **"
             index = gets.strip.to_i - 1
         end
     
