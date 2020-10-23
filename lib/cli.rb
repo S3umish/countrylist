@@ -81,7 +81,7 @@ class CLI
         puts "\n"
         puts "Subregion:  " + country.subregion
         puts "\n"
-        puts "flag:  " + country.flag
+        puts "Flag:  " + country.flag
         puts "\n"
         puts "\n"
 
