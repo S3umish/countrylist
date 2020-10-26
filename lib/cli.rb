@@ -2,8 +2,8 @@ class CLI
 
     def start
     
-        puts "Welcome to the Countrylist!"
-        puts "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
+        puts "Welcome to the Countrylist!" .red.bold
+        puts "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*".red.bold
         puts "\n"
         API.fetch_countries
         self.menu
@@ -11,16 +11,16 @@ class CLI
     end
 
     def menu
-         puts "**  Would you like to learn about different Countries.  **"
+         puts "**  Would you like to learn about different Countries.  **" .blue.bold
          puts "\n"
-         puts "**  Type 'yes' to continue or any other key to 'exit'. **"
+         puts "**  Type 'yes' to continue or any other key to 'exit' **" .green .bold
 
         user_input = gets.strip.downcase
 
         if user_input == "yes" || user_input == "y"
             sleep(1)
              puts"\n"   
-             puts "Awesome! Here's the list of Countries. "
+             puts "Awesome! Here's the list of Countries. ".blue
 
              sleep(2)
         
@@ -34,9 +34,8 @@ class CLI
 
         else
             puts "========================================="
-            puts "Thank you for visiting the Countrylist !!"
+            puts "Thank you for visiting the Countrylist !!" .cyan
             puts "========================================="
-
        end
     end
 
@@ -49,7 +48,7 @@ class CLI
 
     def ask_user_for_their_choice
         
-        puts " ** Choose any number between 1 to 250 to learn about a Country. **"
+        puts " ** Choose any number between 1 to 250 to learn about a Country. **".red.bold
         puts "\n"
         puts " Note : Countries are indexed alphabettically,for example 240. United States of America "
 
@@ -57,7 +56,7 @@ class CLI
 
         until index.between?(0, Country.all.length - 1)
            
-            puts "** Sorry invalid input. Choose a valid number between 1 to 250. **"
+            puts "** Sorry invalid input. Choose a valid number between 1 to 250. **" .yellow
             index = gets.strip.to_i - 1
         end
     
@@ -73,15 +72,15 @@ class CLI
         puts "\n"
         puts country.name
         puts "\n"
-        puts "Country Name:  " + country.name
+        puts "Country Name:  ".cyan + country.name
         puts "\n"
-        puts "Capital:  " + country.capital
+        puts "Capital:  ".red + country.capital
         puts "\n"
-        puts "Region:  " + country.region 
+        puts "Region:  ".cyan + country.region 
         puts "\n"
-        puts "Subregion:  " + country.subregion
+        puts "Subregion:  ".red + country.subregion
         puts "\n"
-        puts "Flag:  " + country.flag
+        puts "Flag:  ".cyan + country.flag
         puts "\n"
         puts "\n"
 
