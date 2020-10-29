@@ -20,7 +20,7 @@ class CLI
         if user_input == "yes" || user_input == "y"
             sleep(1)
              puts"\n"   
-             puts "Awesome! Here's the list of Countries. ".blue
+             puts "Awesome! Here's the list of Countries. ".blue.bold
 
              sleep(2)
         

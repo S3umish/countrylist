@@ -11,9 +11,9 @@ You will get an overview of the [The CountryList API] ["https://restcountries.eu
 
 Install Instructions:
 
-To run the application , use $ruby bin/run on the terminal.
+Please fork and clone the app and then type $ruby bin/run on the terminal to start the program.
 
-Please ensure to install the following ruby gems
+Also ensure to install the following ruby gems : 
 gem 'pry'
 gem 'net/http'
 gem 'json'
