@@ -6,6 +6,7 @@ Hello there ! Welcome to the CLI application : CountryList.
 
 The CountryList database provides the list of the countries.
 You can choose any number between 1 to 250 to see the specific country information ,for example, Country name, Capital City, Region (Continent), Subregion and the Country Flag. 
+Video Demo : https://youtu.be/SjiGQr7GgPw
 
 You will get an overview of the [The CountryList API] ["https://restcountries.eu/rest/v2/all"]
 
