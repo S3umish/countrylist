@@ -6,6 +6,8 @@ Hello there ! Welcome to the CLI application : CountryList.
 
 ![](https://media.giphy.com/media/FShTRZrj36Kqw9T1OK/giphy.gif")
 
+<iframe src="https://giphy.com/embed/FShTRZrj36Kqw9T1OK" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cli-app-FShTRZrj36Kqw9T1OK">via GIPHY</a></p>
+
 The CountryList database provides the list of the countries.
 You can choose any number between 1 to 250 to see the specific country information ,for example, Country name, Capital City, Region (Continent), Subregion and the Country Flag. 
 Video Demo : https://youtu.be/SjiGQr7GgPw
