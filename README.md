@@ -4,6 +4,8 @@ Database of Countries .
 
 Hello there ! Welcome to the CLI application : CountryList.
 
+[The CountryList App] ["https://media.giphy.com/media/FShTRZrj36Kqw9T1OK/giphy.gif"]
+
 The CountryList database provides the list of the countries.
 You can choose any number between 1 to 250 to see the specific country information ,for example, Country name, Capital City, Region (Continent), Subregion and the Country Flag. 
 Video Demo : https://youtu.be/SjiGQr7GgPw
